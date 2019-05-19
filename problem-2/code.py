@@ -3,7 +3,7 @@ MAX_VALUE = 4e6
 # Legacy method
 
 
-def fill_even_fibonacci(max_value):
+def fill_fibonacci(max_value):
     fib_list = [1, 1]
     increment = 1
     while(True):
@@ -15,7 +15,7 @@ def fill_even_fibonacci(max_value):
     return fib_list
 
 
-print(sum([num for num in fill_even_fibonacci(MAX_VALUE) if num % 2 == 0]))
+print(sum([num for num in fill_fibonacci(MAX_VALUE) if num % 2 == 0]))
 
 # With reactive programming
 # TODO
