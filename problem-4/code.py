@@ -6,17 +6,15 @@ def is_palindrome(number):
 
 
 def find_products(digit):
-    products = []
+    result = [0, 0, 0]
     max_number = 10**(digit)
 
     for i in range(10**(digit-1), max_number):
         for j in range(10**(digit-1), max_number):
-            if(is_palindrome(i*j)):
-                products.append([i*j, i, j])
-            else:
-                continue
+            if(is_palindrome(i*j) and i*j > result[0]):
+                result = [i*j, i, j]
 
-    return products
+    return result
 
 
-print(max(find_products(3)))
+print(find_products(3))
