@@ -2,11 +2,7 @@
 
 
 def is_palindrome(number):
-    string_num = str(number)
-    reversed_num = string_num[::-1]
-    if reversed_num == string_num:
-        return True
-    return False
+    return str(number) == str(number)[::-1]
 
 
 def find_products(digit):
