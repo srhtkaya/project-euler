@@ -1,6 +1,8 @@
 NUMBER = 600851475143
 
 
+# What is the largest prime factor of the number 600851475143?
+
 def is_prime(n):
     if n == 2 or n == 3:
         return True

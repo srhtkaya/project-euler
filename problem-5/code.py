@@ -1,3 +1,8 @@
+# Smallest multiple
+# What is the smallest positive number that is evenly divisible by all of
+# the numbers from 1 to 20?
+
+
 def gcd(number1, number2):
     if number1 == 0:
         return number2
