@@ -5,7 +5,6 @@ MAX_VALUE = 4e6
 
 # Legacy method
 
-
 def fill_fibonacci(max_value):
     fib_list = [1, 1]
     increment = 1
@@ -21,4 +20,13 @@ def fill_fibonacci(max_value):
 print(sum([num for num in fill_fibonacci(MAX_VALUE) if num % 2 == 0]))
 
 # With reactive programming
-# TODO
+
+from rx import from_list, operators as op
+
+source = from_list(fill_fibonacci(MAX_VALUE))
+source.pipe(
+    op.filter(lambda x : x %2==0),
+    op.sum()
+).subscribe(
+    lambda i : print(i)
+)

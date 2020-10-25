@@ -27,4 +27,4 @@ def factorization(number):
     return factors
 
 
-print(factorization(NUMBER))
+print(max(factorization(NUMBER)))
